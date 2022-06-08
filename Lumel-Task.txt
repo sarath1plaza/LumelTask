@@ -1,0 +1,33 @@
+all_data={
+	"dimensions": [
+		{
+			"id": "dimension_re",
+			"values": ["East", "East", "West", "SouthWest", "South", "NorthEast"]
+		}, 
+		{
+			"id": "dimension_cnt",
+			"values": ["London", "Italy", "Germany", "US", "Russia", "India"]
+		}
+	]
+}
+new_list=[]
+test_dict={}
+dimension_value=all_data['dimensions']
+
+for value in range(len(dimension_value)):
+    region_and_country=dimension_value[value]['values']
+
+    if value==0:
+        item_value='Region'
+    elif value==1:
+        item_value='Country'
+    
+    for item in range(len(region_and_country)):
+        test_dict.update({item_value:region_and_country[item]})
+        new_list.append(test_dict)
+print(new_list)
+
+
+
+Output:
+[{'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}, {'Region': 'NorthEast', 'Country': 'India'}]
